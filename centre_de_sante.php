@@ -10,7 +10,7 @@
  
 </div>
 <div class="contain_formul">
-<div class="fomm"> 
+<div class="fomm_sante"> 
 <div class="contre_sante-form">
   <span class="heading_sante">Formulaire de Centre de Santé</span>
   <form>

@@ -10,7 +10,7 @@
 <div class="contain_formul">
 <div class="fomm"> 
 <div class="amenagment-form">
-  <span class="heading_am">Formulaire de saisi de compétence et de proposition de service
+  <span class="heading_am"> saisie de compétence et de proposition de service
 </span>
   <form>
     <label for="name">Nom:</label>

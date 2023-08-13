@@ -3,14 +3,14 @@
 ?>
 
 <div class="header_dem">
-    <h2> Recensement quotidien des personnes qui déménage du quartier</h2>
+    <h2> Recensement des personnes qui déménage du quartier</h2>
 </div>
 <main>
 <div class="contain_dem">
 <div class="fomm"> 
 
 <div class="demenagment-form">
-  <span class="heading_dem">Renseigner ce formulaire pour votre déménagement</span>
+  <span class="heading_dem">Saisie pour  votre déménagement</span>
 
   <form>
     <label for="name">Nom:</label>
