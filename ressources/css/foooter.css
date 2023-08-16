@@ -39,8 +39,8 @@ footer.light .footer-copyright{ background: none repeat scroll 0 0 rgba(255, 255
 .widget.no-box{ padding: 0; background-color: transparent;  margin-bottom: 40px;
   box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none;}
 .widget.subscribe p{  margin-bottom: 18px;}
-.widget li a{ color: #1fc12a;}
-.widget li a:hover{ color: #182a23;}
+.widget li a{ color: #f6faf6;}
+.widget li a:hover{ color: #19c885;}
 .widget-title {margin-bottom: 20px;}
 .widget-title span {background: #839FAD none repeat scroll 0 0;display: block; height: 1px;margin-top: 25px;position: relative;width: 20%;}
 .widget-title span::after {background: inherit;content: "";height: inherit;    position: absolute;top: -4px;width: 50%;}
@@ -62,7 +62,7 @@ ul.social-footer2 { margin: 0;padding: 0; width: auto;}
 ul.social-footer2 li {display: inline-block;padding: 0;}
 ul.social-footer2 li a:hover {background-color:#05271c;}
 ul.social-footer2 li a {display: block; height:30px;width: 30px;text-align: center;}
-.btn{background-color: #1fc12a;; color:#fff;}
+.btn{background-color: #d7ded7;; color:#fff;}
 .btn:hover, .btn:focus, .btn.active {background: #4b92dc;color: #fff;
 -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);

@@ -9,10 +9,10 @@
 
 <div class="contain_formul">
 <div class="fomm"> 
-<div class="amenagment-form">
-  <span class="heading_am"> saisie de compétence et de proposition de service
+<div class="offre-form">
+  <span class="heading_offre"> saisie de compétence et de proposition de service
 </span>
-  <form>
+  <form class="form_dv">
     <label for="name">Nom:</label>
     <input type="text" required="">
     <label for="name">Prénoms:</label>

@@ -72,14 +72,14 @@
    */
   .contre_sante-form input {
     /* padding: 10px; */
-    width: 300px;
+    width: 500px;
     /* border: none; */
     border-radius: 5px;
     /* margin-bottom: 20px; */
   }
   
   .contre_sante-form input:focus, .contre_sante-form textarea:focus {
-    outline: none;
+    /* outline: none; */
     box-shadow: 0 0 5px #04AA6D;
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;

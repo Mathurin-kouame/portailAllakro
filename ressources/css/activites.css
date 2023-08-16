@@ -23,7 +23,12 @@
  /* formulaire des activités */
 
  .containes {
+  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid #af0b5d;
+    width: 600px;
  }
 
  .form-activ {
