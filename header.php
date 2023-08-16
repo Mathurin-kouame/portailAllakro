@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="./ressources/css/centre_de_sante.css">
 <link rel="stylesheet" href="./ressources/css/amenagement.css">
 <link rel="stylesheet" href="./ressources/css/demenagement.css">
+<link rel="stylesheet" href="./ressources/css/foooter.css">
 <body>
     <div class='header row'><img src='banniere.jpg' id='image'></div>
     <div class='body'>
