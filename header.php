@@ -25,7 +25,6 @@
         <button class="dropbtn">MENU</button>
         <div class="dropdown-content">
           <a href="nouveau.php">Nouveau</a>
-          
         </td>
         <td>
           <div class="dropdown">
@@ -34,8 +33,7 @@
               <a href="#">liste des centres de santé</a>
               <a href="#">Pharmacie de garde</a>
               <a href="referentiel.php">referentiel Metiers</a>
-              <a href="./offre.php">offre d'emploi</a>
-              
+              <a href="./offre.php">offre d'emploi</a>   
         </td>
         <td>
           <div class="dropdown">
@@ -51,17 +49,19 @@
               <a href="./amenagement.php">Aménagement</a>
               <a href="./demenagement.php">Déménagement</a>
               <a href="./activites.php">activite</a>
-              <a href="#">centre d'interêt</a>
-
-              
+              <a href="#">centre d'interêt</a> 
         </td>
         <td>
           <div class="dropdown">
             <button class="dropbtn">ACTUALITES</button>
             <div class="dropdown-content">
               <a href="#">consulter</a>
-              
         </td>
+        
+        <a class="nav-link" href="./inscription.php">Inscription</a>
+        <a class="nav-link" href="./connexion.php">Connexion</a>
+   
+        
         </tr>
         </div>
       </div>
