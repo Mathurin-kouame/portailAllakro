@@ -1,5 +1,3 @@
-
-
 <footer id="footer" class="footer-1">
 <div class="main-footer widgets-dark typo-light">
 <div class="container">

@@ -1,11 +1,4 @@
 
-<?php 
-var_dump($_POST);
-if (empty($_Post)) {
-  # code...
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,19 +10,33 @@ if (empty($_Post)) {
 </head>
 <body>
   <div class="text_inscrip">
-  <h1>Veillez remplir se formulaire</h1>
-  </div>
+  <h1>Veillez remplir le formulaire</h1>
+  
 
 <div class="login-box">
- <form action="" method="post">
+ <form action="validinscription.php" method="post">
+
+ <table>
+  <tr>
+    <td>
+  <input type="radio" id="admin" name="type" value="administrateur" required="">
+  <label for="administrateur">Administrateur</label><br>
+  </td>
+  <td>
+  <input type="radio" id="user" name="type" value="utilisateur" required="">
+  <label for="utilisateur">Utilisateur</label><br>
+  </td>
+  </tr>
+  </table><br>
+
  <div class="user-box">
      <input type="text" id="id" name="username" required="">
-     <label>Nom d'utisateur</label>
+     <label>Nom d'utilisateur</label>
    </div>
 
    <div class="user-box">
      <input type="text" id="email" name="email" required="">
-     <label>Votre adresse eamil</label>
+     <label>Votre adresse email</label>
    </div>
 
    <div class="user-box">

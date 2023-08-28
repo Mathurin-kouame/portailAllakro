@@ -1,38 +1,46 @@
+<?php
+    $serveur = "localhost";
+    $dbname = "pct_bd";
+    $user = "root";
+    $pass = "";
+   
 
-<?php 
-    include_once("header.php")
-?>
-<main>
-<div class="header_offres">
-    <h2>Recheche d'emploi</h2>
-</div>
-
-<div class="contain_formul">
-<div class="fomm"> 
-<div class="offre-form">
-  <span class="heading_offre"> saisie de compétence et de proposition de service
-</span>
-  <form class="form_dv">
-    <label for="name">Nom:</label>
-    <input type="text" required="">
-    <label for="name">Prénoms:</label>
-    <input type="text" required="">
+    $typoff = $_POST["nature"];
+    $nomprenoff = $_POST["nometprenom"];
+    $servoff = $_POST["serviceoffert"];
+    $compoff = $_POST["competence"];
+    $teloff = $_POST["telephone"];
+    $imgoff = $_POST["image"];
+    $messoff = $_POST["message"];
+    $datoff = $_POST["date"];
     
-       <label for="name">Service proposé:</label>
-    <input type="text" required="">
-    <label for="name">Qualifications/compétences:</label>
-    <input type="sex" required="">
-    <label for="name">Contact Téléphonique:</label>
-    <input type="text" required="">
-    <button type="submit" value="envoyer">publier une offre</button>
-  </form>
-</div>
-</div>
-</main>
-    <!-- <div class="btn_sortie">
-    <a href="demenagement.php">Quitter le quatier</a>
-    </div>
-    -->
-</div>
-</main>
 
+
+    
+    
+    try{
+        //On se connecte à la BDD
+        $dbco = new PDO("mysql:host=$serveur;dbname=$dbname",$user,$pass);
+        $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+        //On insère les données reçues
+        $sth = $dbco->prepare("
+            INSERT INTO offre(typoff,nomprenoff,servoff,compoff,teloff,imgoff,messoff,datoff)
+            VALUES(:nature, :nometprenom, :serviceoffert, :competence, :telephone, :image, :message, :date)");
+         
+        $sth->bindParam(':nature',$typoff);
+        $sth->bindParam(':nometprenom',$nomprenoff);
+        $sth->bindParam(':serviceoffert',$servoff);
+        $sth->bindParam(':competence',$compoff);
+        $sth->bindParam(':telephone', $teloff);
+        $sth->bindParam(':image',$imgoff);
+        $sth->bindParam(':message',$messoff);
+        $sth->bindParam(':date',$datoff);
+        $sth->execute();
+         //On renvoie l'utilisateur vers la page de remerciement
+         header("Location:merci.html"); 
+    }
+    catch(PDOException $e){
+        echo 'Impossible de traiter les données. Erreur : '.$e->getMessage();
+    }
+?>

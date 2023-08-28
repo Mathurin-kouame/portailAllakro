@@ -3,49 +3,29 @@
 ?>
 
 <div class="header_dem">
-    <h2> Recensement des personnes qui déménage du quartier</h2>
+    <h2> Recensement quotidien des personnes qui déménage du quartier</h2>
 </div>
 <main>
 <div class="contain_dem">
 <div class="fomm"> 
 
 <div class="demenagment-form">
-  <span class="heading_dem">Saisie pour  votre déménagement</span>
+  <span class="heading_dem">Renseigner ce formulaire pour votre déménagement</span>
+  <FORM name="formdem" id="frmdeces" action="depart.php" method="post">
 
-  <form>
-    <label for="name">Nom:</label>
-    <input type="text" required="">
-    <label for="name">Prénoms:</label>
-    <input type="text" required="">
-    <div>
-        <label for="sexnaiss">sexe</label>
-        <select name="sexe" id="sexnaiss">
-            <option value="">
-            </option>
-            <option value="homme">Homme</option>
-            <option value="homme">Femme</option>
-        </select>
-     </div>
-       <label for="name">fonction:</label>
-    <input type="text" required="">
-    <label for="name">Date de naissance:</label>
-    <input type="sex" required="">
-    <label for="name">Provenance:</label>
-    <input type="text" required="">
-    <div>
-        <label for="sexnaiss">Mode d’hébergement à l’arrivée</label>
-        <select name="sexe" id="sexnaiss">
-            <option value="">
-            </option>
-            <option value="feminin">Nouvelle habitation</option>
-            <option value="Masculin">Chez un parent</option>
-        </select>
-     </div>
-     <label for="name">Nom de parent:</label>
-    <input type="text" required="">
-    <label for="name">Lieu d’habitation de la famille:</label>
-    <input type="text" required=" à côté de..., où chez ... où en bas du quartier">
-    <button type="submit" value="envoyer">Enregistrer</button>
+ 
+            <label for="numact">Identifiant</label>
+                <INput type="text" name="identifiant" id="numact" width ="40"  required></INput>
+        
+    <TAble>
+        <TR>
+            <TD>
+    <input type="submit" value="ENVOYER" width="60"></INput></br>
+</TD><TD> <input type="reset" value="ANNULER" width="60"></INput></br></TD>  
+</TR>
+</TAble>
+       
+    
   </form>
 </div>
 </div>

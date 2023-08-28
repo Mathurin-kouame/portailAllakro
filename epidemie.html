@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Epidemie</title>
+</head>
+<body>
+<div class='header row'><img src='banniere.jpg' id='image'></div>
+<center>
+<H1>ENREGISTRER UNE EPIDEMIE</H1>
+        <FORM name="formepi" id="epi" action="epidemie.php" method="post">
+            <div>
+                <div>
+                    <label for="nomepi">Nom de l'epidemie</label>
+                        <INput type="text" name="nom" id="nomepi" width="60"></INput>
+                </div></br>
+                <div>
+                    <label for="libepi">information sur l'epidemie </label>
+                        <textarea name="libelle" id="libepi" cols="100" rows="10"></textarea>
+                </div></br>
+                <div>
+                    <label for="datdebepi">date de debut</label>
+                        <INput type="date" name="dated" id="datdebepi" width="60"></INput>
+                </div></br>
+                <div>
+                    <label for="datdefiepi">date de fin</label>
+                        <INput type="date" name="datef" id="datdefiepi" width="60"></INput>
+                </div></br>
+            
+                <TAble>
+                    <TR>
+                        <TD>
+                <input type="submit" value="ENVOYER" width="60"></INput></br>
+            </TD><TD> <input type="reset" value="ANNULER" width="60"></INput></br></TD>  
+            </TR>
+            </TAble>
+        </FORM>
+    </center>
+    
+
+</body>
+</html>

@@ -28,34 +28,31 @@
  }
 
 /* formulaire */
- .offre-form {
+ .contact-form {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
   }
   
-  .offre-form label {
+  .contact-form label {
     color: black;
   }
   
-  .offre-form .heading_offre {
+  .contact-form .heading {
     font-size: 24px;
     color: black;
+    ;
     margin-bottom: 12px;
     font-weight: bold;
     display: block;
   }
   
-  .form_dv {
-    display: flex;
-  }
-
-  .offre-form form {
+  .contact-form form {
     display: flex;
     flex-direction: column;
   }
   
-  .offre-form label {
+  .contact-form label {
     margin-bottom: 10px;
   }
   
@@ -65,30 +62,31 @@
     width: 200px;
   }
   
-  .offre-form input, .offre-form textarea {
+  .contact-form input, .contact-form textarea {
     padding: 10px;
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
   }
   
-  .offre-form input:focus, .offre-form textarea:focus {
+  .contact-form input:focus, .contact-form textarea:focus {
     outline: none;
     box-shadow: 0 0 5px  #0b6343;
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
   }
   
-  .offre-form button[type="submit"] {
+  .contact-form button[type="submit"] {
     background-color: #0b6343;
     color: #fff;
+    border: none;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
   }
   
-  .offre-form button[type="submit"]:hover {
+  .contact-form button[type="submit"]:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
   }

@@ -6,7 +6,7 @@
  
  
  
- .header_centre_sante {
+ .header_centre_sante{
     margin-top: -2%;
      width: 100%;
      height: 50vh;
@@ -15,7 +15,7 @@
      /* filter: brightness(0.6); */
      filter: blur(0.5);
      background-image: url("../images/IMG_8232-min-1140x760@2x.jpg");
-    
+     border: 2px solid #aa0f04;
  
  }
  
@@ -28,15 +28,12 @@
      visibility: visible;
      
  }
-.fomm_sante{
-    border: 2px solid #3b04aa;
-}
 
  /* formulaire */
  .contre_sante-form {
-    width: 80%;
+    width: 100%;
     height: 100%;
-    padding: 90px;
+    padding: 100px;
     border-radius: 10px;
     border: 2px solid #aa5d04;
     background-color: #f2f2f2;
@@ -70,16 +67,15 @@
     width: 200px;
   }
    */
-  .contre_sante-form input {
-    /* padding: 10px; */
-    width: 500px;
+  .contre_sante-form input, .contre_sante-form textarea {
+    padding: 10px;
     /* border: none; */
     border-radius: 5px;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
   }
   
   .contre_sante-form input:focus, .contre_sante-form textarea:focus {
-    /* outline: none; */
+    outline: none;
     box-shadow: 0 0 5px #04AA6D;
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;

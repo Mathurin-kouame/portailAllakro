@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>deces</title>
+</head>
+<body>
+    <div class='header row'><img src='banniere.jpg' id='image'></div>
+    <center>
+<H1>Enregistrer les naissances du jour</H1>
+<FORM name="monform" id="frmcontact" action="naissance.php" method="post">
+
+    <div>
+        <div>
+            <label for="natact">Nature</label>
+                <INput type="text" name="nature" id="natact"  width="40" disabled="disabled"></INput>
+        </div></br>
+        <div>
+            <label for="nomprenact">nom et prenom</label>
+                <INput type="text" name="nometprenom" id="nomprenact"  width="40"></INput>
+        </div></br>
+        <div>
+            <label for="sexact">sexe</label>
+                <select name="sexe" id="sexnaiss">
+                    <option value=""></option>
+                    <option value="feminin">feminin</option>
+                    <option value="Masculin">masculin</option>
+                  </select>
+        </div></br>
+        <div>
+            <label for="datact">date de naissance</label>
+            <INput type="date" name="datedenaissance"  id="datact" width="40" ></INput>
+        </div></br> 
+        
+        <div>
+            <label for="lienaissact">lieu de naissance</label>
+                <INput type="text" name="lieudenaissance" id="lienaissact" width="40"></INput>
+        </div></br>
+        <div>
+            <label for="peract">nom du pere</label>
+                <INput type="text" name="pere" id="peract" width="40"></INput>
+        </div></br>
+        <div>
+            <label for="meract">nom de la mere</label>
+                <INput type="text" name="mere" id="meract" width="40"></INput>
+        </div></br> 
+        <div>
+            <label for="liehabact">lieu d'habitation</label>
+                <INput type="text" name="lieudhabitation"  id="liehabact" width="40"></INput>
+        </div></br>
+        <div>
+            <label for="etatact">etat</label>
+            <INput type="text" name="etat"  id="etatact" width="40"  disabled="disabled" ></INput>
+        </div></br>
+    </div></br>
+    <TAble>
+        <TR>
+            <TD>
+    <input type="submit" value="ENVOYER" width="60"></INput></br>
+</TD><TD> <input type="reset" value="ANNULER" width="60"></INput></br></TD>  
+</TR>
+</TAble>
+</FORM>
+</center>
+</body>
+</html>
