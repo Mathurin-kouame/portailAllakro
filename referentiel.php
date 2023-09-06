@@ -1,19 +1,37 @@
+<?php 
+  $referentiel = true;
+
+?>
+
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8" />
-  <title>Liste des habitants du village</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
- </head>
- 
+<html lang="fr">
+<head>
+ <meta charset="utf-8"/>
+<title>Liste des habitants du village</title>
+<link rel="stylesheet" href="./ressources/css/accueil_chefferie.css">
+<link rel="stylesheet" href="./ressources/css/referentiel.css">
+<body>
+        <div class='row bg-primary'></div>
+    <header id="mainheader" class="bg-danger" >  
+        <nav class="mainnav">
+           <div class="logo_p" ><a href = "index.php">PortailAllakro</a></div> 
+            <div><a  <?php echo !empty($acceuilchefferie)?"active" :"" ?> href="acceuilchefferie.php" >Tableau de bord</a></div>        
+            <div><a <?php echo !empty($validdeces)?"active" :"" ?> href="validdeces.php" >Decès</a></div>
+            <div><a <?php echo !empty($validnaissance)?"active" :"" ?> href="validnaissance.php">Naissance</a></div> 
+            <div><a <?php echo !empty($validemenagement)?"active" :"" ?> href="validemenagement.php">Démenagement</a></div> 
+            <div><a <?php echo !empty($liste_message)?"active" :"" ?> href="liste_message.php" >Messageries</a></div>
+            <div><a <?php echo !empty($referentiel)?"active" :"" ?> href="referentiel.php" >Liste Acteurs</a></div>
+           <div class="btn_login"><a href = "logout.php">Se Deconnecter</a></div> 
+        </nav>
+    </header>
+</head>
  <body>
-    <img src="banniere.jpg" class="logo">
-    <center><H1>liste des metiers du village</H1></center>
+    <h1>liste des metiers du village</h1>
     
         <?php
   try  //Connection a la bdd
   {
-   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', '');
+   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', 'root');
   }
   catch (Exception $e)
   {
@@ -23,23 +41,23 @@
   
         echo '<center><div class="liste"><table>';
                  echo '<tr>';
-                     echo '<th class="thliste">N°</th>';
-                     echo '<th class="thliste">civilite</th>';
-                     echo '<th class="thliste">nom et prenom</th>';
-                     echo '<th class="thliste">telephone</th>';
-                     echo '<th class="thliste">age</th>';
-                     echo '<th class="thliste">pays de naissance</th>';
-                     echo '<th class="thliste">nationalite</th>';
-                     echo '<th class="thliste">situation matrimoniale</th>';
-                     echo '<th class="thliste">adresse</th>';
-                     echo '<th class="thliste">lire ou ecrire</th>';
-                     echo '<th class="thliste">niveau etude</th>';
-                     echo '<th class="thliste">profession</th>';
-                     echo '<th class="thliste">autres metiers</th>';
-                     echo '<th class="thliste">avez-vous des enfants</th>';
-                     echo '<th class="thliste">nombre enfant</th>';
-                     echo '<th class="thliste">communaute villageoise</th>';
-                     echo '<th class="thliste">statut professionnelle</th>';
+                     echo '<th class="thliste"> N°</th>';
+                     echo '<th class="thliste">Civilite</th>';
+                     echo '<th class="thliste">Nom et prenom</th>';
+                     echo '<th class="thliste">Telephone</th>';
+                     echo '<th class="thliste">Age</th>';
+                     echo '<th class="thliste">Pays de naissance</th>';
+                     echo '<th class="thliste">Nationalite</th>';
+                     echo '<th class="thliste">Situation matrimoniale</th>';
+                     echo '<th class="thliste">Adresse</th>';
+                     echo '<th class="thliste">Lire ou ecrire</th>';
+                     echo '<th class="thliste">Niveau etude</th>';
+                     echo '<th class="thliste">Profession</th>';
+                     echo '<th class="thliste">Autres metiers</th>';
+                     echo '<th class="thliste">Avez-vous des enfants</th>';
+                     echo '<th class="thliste">Nombre enfant</th>';
+                     echo '<th class="thliste">Communaute villageoise</th>';
+                     echo '<th class="thliste">Statut professionnelle</th>';
                  echo '</tr>';
    
             while($donnees = $reponse->fetch()) // Renvoit les valeurs de la bdd

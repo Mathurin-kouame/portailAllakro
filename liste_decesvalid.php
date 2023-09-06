@@ -3,6 +3,7 @@
  <head>
   <meta charset="utf-8" />
   <title>Liste des deces en cours de validation </title>
+  <link rel="stylesheet" type="text/css" href="./ressources/css/liste_deces.css">
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script type="text/javascript">
           function changeValueOfCheckbox(check) {
@@ -30,13 +31,13 @@
  </head>
  
  <body>
-    <img src="banniere.jpg" class="logo">
+   
       <center><h1>necrologie</h1></center>
       
         <?php
   try  //Connection a la bdd
   {
-   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', '');
+   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', 'root');
   }
   catch (Exception $e)
   {
@@ -46,12 +47,12 @@
   
         echo '<center><div class="liste"><table>';
                  echo '<tr>';
-                     echo '<th class="thliste">identifiant</th>';
-                     echo '<th class="thliste">nometprenom</th>';
-                     echo '<th class="thliste">lieudedeces</th>';
-                     echo '<th class="thliste">datededeces</th>';
-                     echo '<th class="thliste">motifdeces</th>';
-                     echo '<th class="thliste">parentdudefunt</th>';
+                     echo '<th class="thliste">Identifiant</th>';
+                     echo '<th class="thliste">Nom et Prenoms</th>';
+                     echo '<th class="thliste">Lieu de Décès</th>';
+                     echo '<th class="thliste">Date de Décès</th>';
+                     echo '<th class="thliste">Motif décès</th>';
+                     echo '<th class="thliste">Parents du Défunt</th>';
                     
 
                  echo '</tr>';

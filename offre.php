@@ -2,7 +2,7 @@
     $serveur = "localhost";
     $dbname = "pct_bd";
     $user = "root";
-    $pass = "";
+    $pass = "root";
    
 
     $typoff = $_POST["nature"];

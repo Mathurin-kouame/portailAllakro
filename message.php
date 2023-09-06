@@ -2,19 +2,13 @@
     $serveur = "localhost";
     $dbname = "pct_bd";
     $user = "root";
-    $pass = "";
+    $pass = "root";
    
-
     $nom= $_POST["nom"];
     $prenom = $_POST["prenom"];
     $telephone= $_POST["telephone"];
     $email = $_POST["email"];
     $message = $_POST["message"];
-
-
-
-    
-
     
     try{
         //On se connecte à la BDD
@@ -32,7 +26,6 @@
         $sth->bindParam(':email', $email);
         $sth->bindParam(':message', $message);
 
-        
         $sth->execute();
          //On renvoie l'utilisateur vers la page de remerciement
          header("Location:merci.html"); 

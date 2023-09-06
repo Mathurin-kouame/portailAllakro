@@ -1,0 +1,80 @@
+/* Reset some default styles and set a common font family */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the header section */
+  .header {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 13px;
+  }
+  
+  #image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style the navigation menu */
+  .mainnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d613e; 
+    padding: 30px;
+  }
+
+  .mainnav .logo_p{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-left: -80%;
+  }
+  /* .mainnav .logo_p a:hover{
+    
+  } */
+
+  .mainnav a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+    margin-right: 30px;
+    align-content: space-between;
+  }
+  
+  .mainnav a:hover {
+    padding: 10px;
+    background: #149825;
+  }
+
+  .btn_login {
+    position: absolute;
+    float: right;
+    margin-right: -80%;
+  }
+  /* Style the body section */
+  .body {
+    padding: 20px;
+  }
+  
+  /* Style the welcome message and logout link */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+  
+ 
+  .row {
+    padding: 10px;
+  }
+  
+  .bg-primary {
+    background-color: #19412d; /* Blue background color */
+  }
+  
+   

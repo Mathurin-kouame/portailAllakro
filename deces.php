@@ -2,7 +2,7 @@
     $serveur = "localhost";
     $dbname = "pct_bd";
     $user = "root";
-    $pass = "";
+    $pass = "root";
    
 
    $numact= $_POST["reussite"];
@@ -10,7 +10,7 @@
    $datact= $_POST["datededeces"];
    $motact= $_POST["motifdeces"];
    $nomprenparact= $_POST["parentdudefunt"];
-   $natact= $_POST["etat"]=deces;
+   $natact= $_POST["etat"]='deces';
 
   
 

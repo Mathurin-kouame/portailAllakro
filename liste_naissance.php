@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8" />
   <title>Liste des naissances en cours de validation </title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="./ressources/css/liste_naissance.css" />
   <script type="text/javascript">
           function changeValueOfCheckbox(check) {
             var tr = document.getElementById(check.value);
@@ -30,13 +30,13 @@
  </head>
  
  <body>
-    <img src="banniere.jpg" class="logo">
-      <center><h1>liste des naissances du moment</h1></center>
+   
+      <h1>liste des naissances du moment</h1>
       
         <?php
   try  //Connection a la bdd
   {
-   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', '');
+   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', 'root');
   }
   catch (Exception $e)
   {
@@ -48,15 +48,15 @@
                  echo '<tr>';
 
                     
-                     echo '<th class="thliste">numero</th>';
-                     echo '<th class="thliste">nature</th>';
-                     echo '<th class="thliste">nometprenom</th>';
-                    echo '<th class="thliste">datedenaissance</th>';
-                     echo '<th class="thliste">pere</th>';
-                     echo '<th class="thliste">mere</th>';
-                     echo '<th class="thliste">lieudenaissance</th>';
-                     echo '<th class="thliste">sexe</th>';
-                     echo '<th class="thliste">lieudhabitation</th>';
+                     echo '<th class=" thliste "> N°</th>';
+                     echo '<th class=" thliste "> Nature</th>';
+                     echo '<th class=" thliste "> Nom et Prenom</th>';
+                     echo '<th  class="  thliste "> Date de Naissance</th>';
+                     echo '<th class=" thliste "> Père</th>';
+                     echo '<th class=" thliste "> Mere</th>';
+                     echo '<th class=" thliste "> Lieu de Naissance </th>';
+                     echo '<th class=" thliste "> Sexe</th>';
+                     echo '<th class=" thliste "> Lieu d habitation </th>';
                      
                  echo '</tr>';
    

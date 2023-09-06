@@ -1,8 +1,9 @@
+
 <?php
     $serveur = "localhost";
     $dbname = "pct_bd";
     $user = "root";
-    $pass = "";
+    $pass = "root";
    
 
     $civilact = $_POST["civilite"];
@@ -21,7 +22,7 @@
     $Avenfact= $_POST["enfantsacharge"];
     $nombenfact= $_POST["siouicombien"];
     $comvilact= $_POST["communautevillageoise"];
-    $natact= $_POST["nature"]=amenagement;
+    $natact= $_POST["nature"]="amenagement";
 
     
     

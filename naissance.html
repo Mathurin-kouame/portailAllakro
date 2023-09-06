@@ -1,65 +1,111 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>deces</title>
-</head>
-<body>
-    <div class='header row'><img src='banniere.jpg' id='image'></div>
-    <center>
-<H1>Enregistrer les naissances du jour</H1>
-<FORM name="monform" id="frmcontact" action="naissance.php" method="post">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naissance</title>
+        <link rel="stylesheet" href="./ressources/css/demo.css">
+        <link rel="stylesheet" href="./ressources/css/naissance.css">
 
+    </head>
+    <body>
+        <header id="navbar"  class="nav responsive">
+            <div class="logo_site"><a href="index.php">PortailAllakro</a></div>
+            <a class="hover_a" href="acceuiluser.php">Tableau de bord</a>
+            <div class="dropdown_1">
+                <button>Annonces</button>
+                <div class="sous_content">
+                   <a href="nouveau.php">Aménagement</a>
+                   <a href="demenagement.php">Démenagement</a>
+                   <a href="naissance.php">Naissance</a>
+                   <a href="deces.html">Décès</a>
+                </div>
+            </div>
+            <div class="dropdown_1">
+                <button>Santés</button>
+                <div class="sous_content">
+                   <a href="pharmaci.php">Pharmacie</a>
+                   <a href="garde.php">Garde</a>
+                   <a href="centre_de_sante.php">Centre de Santé</a>
+                   <a href="epidemie.html">Epidemie</a>
+                </div>
+            </div>
+            <div class="dropdown_1">
+                <button>Jobs</button>
+                <div class="sous_content">
+                   <a href="offres_emploi.php">Offre d'emploi</a>
+                   <a href="activite.html">Activités</a>
+                </div>
+            </div>
+            <a class="hover_a" href="logoutuser.php">Se Déconnecter</a>
+            <a class="icon" onclick="myFunction()">&#9776;</a>
+        </header>
+    
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navbar");
+                if (x.className === "nav") {
+                    x.className += "responsive";
+                }else {
+                    x.className = "nav";
+                }
+            }
+        </script>
+    
+<h2>Enregistrer les naissances du jour</h2>
+<form name="monform" id="cs_naiss" action="naissance.php" method="post">
     <div>
         <div>
             <label for="natact">Nature</label>
-                <INput type="text" name="nature" id="natact"  width="40" disabled="disabled"></INput>
+                <input type="text" name="nature" id="natact"  width="40" disabled="disabled"></input>
         </div></br>
         <div>
-            <label for="nomprenact">nom et prenom</label>
-                <INput type="text" name="nometprenom" id="nomprenact"  width="40"></INput>
+            <label for="nomprenact">Nom et Prenoms</label>
+                <input type="text" name="nometprenom" id="nomprenact"  width="40"></input>
         </div></br>
         <div>
-            <label for="sexact">sexe</label>
+            <label for="sexact">Sexe</label>
                 <select name="sexe" id="sexnaiss">
                     <option value=""></option>
-                    <option value="feminin">feminin</option>
-                    <option value="Masculin">masculin</option>
+                    <option value="feminin">Feminin</option>
+                    <option value="Masculin">Masculin</option>
                   </select>
         </div></br>
         <div>
-            <label for="datact">date de naissance</label>
-            <INput type="date" name="datedenaissance"  id="datact" width="40" ></INput>
+            <label for="datact">Date de Naissance</label>
+            <input type="date" name="datedenaissance"  id="datact" width="40" ></input>
         </div></br> 
         
         <div>
-            <label for="lienaissact">lieu de naissance</label>
-                <INput type="text" name="lieudenaissance" id="lienaissact" width="40"></INput>
+            <label for="lienaissact">Lieu de Naissance</label>
+                <input type="text" name="lieudenaissance" id="lienaissact" width="40"></input>
         </div></br>
         <div>
-            <label for="peract">nom du pere</label>
-                <INput type="text" name="pere" id="peract" width="40"></INput>
+            <label for="peract">Nom du Père</label>
+                <input type="text" name="pere" id="peract" width="40"></input>
         </div></br>
         <div>
-            <label for="meract">nom de la mere</label>
-                <INput type="text" name="mere" id="meract" width="40"></INput>
+            <label for="meract">Nom de la Mère</label>
+                <input type="text" name="mere" id="meract" width="40"></input>
         </div></br> 
         <div>
-            <label for="liehabact">lieu d'habitation</label>
-                <INput type="text" name="lieudhabitation"  id="liehabact" width="40"></INput>
+            <label for="liehabact">Lieu d'Habitation</label>
+                <input type="text" name="lieudhabitation"  id="liehabact" width="40"></input>
         </div></br>
         <div>
-            <label for="etatact">etat</label>
-            <INput type="text" name="etat"  id="etatact" width="40"  disabled="disabled" ></INput>
+            <label for="etatact">Etat</label>
+            <input type="text" name="etat"  id="etatact" width="40"  disabled="disabled" ></input>
         </div></br>
     </div></br>
-    <TAble>
-        <TR>
-            <TD>
+  
+    <table>
+        <tr>
+            <td>
     <input type="submit" value="ENVOYER" width="60"></INput></br>
-</TD><TD> <input type="reset" value="ANNULER" width="60"></INput></br></TD>  
-</TR>
-</TAble>
-</FORM>
-</center>
+            </td><td> <input type="reset" value="ANNULER" width="60"></input></br></td>  
+</td>
+</table>
+</form>
 </body>
 </html>

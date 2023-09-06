@@ -2,11 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8"/>
-
 <title>Portail des acteurs</title>
-
+<link rel="stylesheet" href="./ressources/css/depart.css">
+<link rel="stylesheet" href="lien_vers_font_awesome.css">
 <body>
-    <div class='header row'><img src='banniere.jpg' id='image'></div>
     <div class='body'>
         <div class='row bg-primary'></div>
     <header id="mainheader" class="bg-danger" >
@@ -40,10 +39,9 @@
    
    define('DB_SERVER', 'localhost');
    define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', '');
+   define('DB_PASSWORD', 'root');
    define('DB_DATABASE', 'pct_bd');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-   
    
    $user_check = $_POST["identifiant"];
    
@@ -62,46 +60,41 @@
       echo "identifiant incorrect";
       header("location:demenagement.php");
    }
-
-   
-   
 ?>
 </div>
+<h2><a class="bouton-retour" href = "demenagement.php"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a></h2>
+    <div class="dclararer"><h3>voulez-vous déclarer un démenagement de :<?php echo $login_session; ?>?</h3></div><br>
 
-    
-    <h1>voulez-vous declarer le demenagement de :<?php echo $login_session; ?>?</h1> 
-    <H1>Si oui veuillez remplir le formulaire ou cliquer sur retour pour revenir à la page precedente</H1>
-    <h2><a href = "demenagement.php">retour</a></h2>
-    <FORM name="formdep" id="frmdep" action="enrdem.php" method="post">
+    <form name="formdep" id="frmdep" action="enrdem.php" method="post">
      
     <input type= hidden onchange="changeValueOfCheckbox(<?php echo $user_check;?>)"  name="reussite" value="<?php echo $user_check;?>" class="Selected">
     <div>
             <label for="numact">Identifiant</label>
-                <INput Type="text"   name="identifiant" id=<?php echo $user_check;?>  value=<?php echo $user_check;?>  width ="40" disabled="disabled"></INput>
+                <input Type="text" name="identifiant" id=<?php echo $user_check;?>  value=<?php echo $user_check;?>  width ="40" disabled="disabled"></input>
         </div></br>
         <div>
             <label for="motact">motif de depart</label>
-                <INput type="text" name="motifdepart" id="motact" width ="40"></INput>
+                <input type="text" name="motifdepart" id="motact" width ="40"></input>
                 </div></br>
                 <div>
             <label for="datact">date de demenagement</label>
-                <INput type="date" name="datedepart" id="datact" width ="40"></INput>
+                <input type="date" name="datedepart" id="datact" width ="40"></input>
                 </div></br>
                 <div>
             <label for="lieact">nouveau lieu d'habitation</label>
-                <INput type="text" name="lieudedepart" id="lieact" width ="40"></INput>
+                <input type="text" name="lieudedepart" id="lieact" width ="40"></input>
                 </div></br>
                 <div>
             <label for="etatact">Chefferie</label>
-                <INput type="text" name="etat" id="etatact" width ="40" disabled="disabled"></INput>
-                 </div></br>
-    <TAble>
-        <TR>
-            <TD>
-    <input type="submit" value="ENVOYER" width="60"></INput></br>
-</TD><TD> <input type="reset" value="ANNULER" width="60"></INput></br></TD>  
-</TR>
-</TAble>
+            <input type="text" name="etat" id="etatact" width ="40" disabled="disabled"></input>
+            </div></br>
+    <table>
+        <tr>
+            <td>
+    <input type="submit" value="ENVOYER" width="60"></input></br>
+</td><td> <input type="reset" value="ANNULER" width="60"></input></br></td>  
+</tr>
+</table>
 </form>
 
     </body>

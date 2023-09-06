@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8" />
   <title>Liste des deces en cours de validation </title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="./ressources/css/listedemenagement.css" />
   <script type="text/javascript">
           function changeValueOfCheckbox(check) {
             var tr = document.getElementById(check.value);
@@ -28,15 +28,14 @@
           }
       </script>
  </head>
- 
  <body>
     <img src="banniere.jpg" class="logo">
-      <center><h1>liste des demenagements </h1></center>
+      <h1>liste des demenagements </h1>
       
         <?php
   try  //Connection a la bdd
   {
-   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', '');
+   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', 'root');
   }
   catch (Exception $e)
   {
@@ -46,13 +45,12 @@
   
         echo '<center><div class="liste"><table>';
                  echo '<tr>';
-                     echo '<th class="thliste">identifiant</th>';
-                     echo '<th class="thliste">nometprenom</th>';
-                     echo '<th class="thliste">lieudedepart</th>';
-                     echo '<th class="thliste">datededepart</th>';
-                     echo '<th class="thliste">motifdepart</th>';
-                     
-
+                     echo '<th class="thliste"> Identifiant</th>';
+                     echo '<th class="thliste"> Nom et Prenom</th>';
+                     echo '<th class="thliste"> Lieu de Départ</th>';
+                     echo '<th class="thliste"> date de Départ</th>';
+                     echo '<th class="thliste"> motif de Départ</th>';
+                     echo '<th class="thliste"> Etat</th>';
                  echo '</tr>';
    
             while($donnees = $reponse->fetch()) // Renvoit les valeurs de la bdd
@@ -76,10 +74,9 @@
       echo "nom sélectionné : ", $_POST['cocher'];
   }
 
-        ?>
+  ?>
   
   </br>
   </br>
-  </center>
     </body>
 </html>

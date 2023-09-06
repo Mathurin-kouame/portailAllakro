@@ -1,25 +1,73 @@
+/* Apply styles to the form container */
+h1 {
+    padding: 30px;
+   text-align: center;
+}
 
- 
- 
- 
- .header_activites{
-    margin-top: -2%;
-     width: 100%;
-     height: 50vh;
-     background-size: cover;
-     background-position: center;
-     /* filter: brightness(0.6); */
-     filter: blur(0.5);
-     background-image: url("../images/WhatsApp\ Image\ 2023-08-06\ at\ 18.55.31.jpeg");
- 
- }
- 
- .header_activites h2 {
-     color: #fff;
-     text-align: center;
-     padding: 10%;
-     font-size: 3rem;
-     font-weight: bold;
-     visibility: visible;  
- }
+#myacti {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+}
 
+/* Style labels */
+label {
+    font-weight: bold;
+}
+
+/* Style text inputs and select */
+input[type="text"],
+input[type="number"],
+select,textarea,
+input[type="date"] {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style file input */
+input[type="file"] {
+    width: 96%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style the submit and reset buttons */
+input[type="submit"]
+ {
+    width: 100%;
+    padding: 10px;
+    background-color:#04AA6D;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(180, 13, 13);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+    background-color: #26d897;
+}
+
+/* Style the reset button on hover */
+input[type="reset"]:hover {
+    background-color: rgb(237, 7, 7);
+}

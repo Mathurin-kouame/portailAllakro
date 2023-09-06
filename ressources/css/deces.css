@@ -1,0 +1,72 @@
+/* Apply styles to the form container */
+h1 {
+    padding: 80px;
+   text-align: center;
+}
+
+#frmdeces {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style labels */
+label {
+    font-weight: bold;
+}
+
+/* Style text inputs and select */
+input[type="text"],
+input[type="number"],
+select,
+input[type="date"] {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style file input */
+input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Style the submit and reset buttons */
+input[type="submit"]
+ {
+    width: 100%;
+    padding: 10px;
+    background-color:#04AA6D;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(157, 10, 10);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+    background-color: #247227;
+}
+
+/* Style the reset button on hover */
+input[type="reset"]:hover {
+    background-color: rgb(180, 13, 13);
+}

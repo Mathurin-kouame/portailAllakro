@@ -2,9 +2,9 @@
     $serveur = "localhost";
     $dbname = "pct_bd";
     $user = "root";
-    $pass = "";
+    $pass = "root";
    
-    $natact = $_POST["nature"]=naissance;
+    $natact = $_POST["nature"]='naissance';
     $nomprenact = $_POST["nometprenom"];
     $sexact = $_POST["sexe"];
     $lienaissact= $_POST["lieudenaissance"];
@@ -12,11 +12,7 @@
     $peract= $_POST["pere"];
     $meract= $_POST["mere"];
     $liehabact= $_POST["lieudhabitation"];
-    $etatact= $_POST["etat"]=encoursdevalidation;
-    
-
-
-    
+    $etatact= $_POST["etat"]='encoursdevalidation';
     
     try{
         //On se connecte à la BDD
@@ -39,7 +35,7 @@
         $sth->bindParam(':etat',$etatact);
         $sth->execute();
          //On renvoie l'utilisateur vers la page de remerciement
-         header("Location:merci.html"); 
+         header("Location:naissance.html"); 
     }
     catch(PDOException $e){
         echo 'Impossible de traiter les données. Erreur : '.$e->getMessage();

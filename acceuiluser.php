@@ -1,57 +1,62 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-
-<title>Portail des acteurs</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link href="./style/style.css" rel="stylesheet"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisateurs</title>
+    <link rel="stylesheet" href="./ressources/css/demo.css">
+</head>
 <body>
-    <div class='header row'><img src='banniere.jpg' id='image'></div>
-    <div class='body'>
-        <div class='row bg-primary'></div>
-    <header id="mainheader" class="bg-danger" >
-      <Table>
-        <tr>
-          <td>
-      <div class="dropdown">
-        <button class="dropbtn">MENU</button>
-        <div class="dropdown-content">
-          <a href="nouveau.php">Nouveau</a>
-          
-        </td>
-       
-        <td>
-          <div class="dropdown">
-            <button class="dropbtn">INFORMATION</button>
-            <div class="dropdown-content">
-              <a href="demenagement.php">Demenagement</a>
-              <a href="offre.html">Offre</a>
-              <a href="deces.html">deces</a>
-              <a href="pharmacie.html">pharmacie</a>
-              <a href="garde.php">garde</a>
-              <a href="centre_de_sante.php">centre de santé</a>
-              <a href="activite.html">activite</a>
-              <a href="naissance.html">naissance</a>
-              <a href="epidemie.html">epidemie</a>
+    <header id="navbar"  class="nav responsive">
+        <div class="logo_site"><a href="index.php">PortailAllakro</a></div>
+        <a class="hover_a" href="acceuiluser.php">Tableau de bord</a>
+        <div class="dropdown_1">
+            <button>Annonces</button>
+            <div class="sous_content">
+               <a href="nouveau.php">Aménagement</a>
+               <a href="depart.php">Démenagement</a>
+               <a href="naissance.php">Naissance</a>
+               <a href="deces.html">Décès</a>
+            </div>
+        </div>
+        <div class="dropdown_1">
+            <button>Santés</button>
+            <div class="sous_content">
+               <a href="pharmaci.php">Pharmacie</a>
+               <a href="garde.php">Garde</a>
+               <a href="centre_de_sante.php">Centre de Santé</a>
+               <a href="epidemie.html">Epidemie</a>
+            </div>
+        </div>
+        <div class="dropdown_1">
+            <button>Jobs</button>
+            <div class="sous_content">
+               <a href="offres_emploi.php">Offre d'emploi</a>
+               <a href="activite.html">Activités</a>
+            </div>
+        </div>
+        <a class="hover_a" href="logoutuser.php">Se Déconnecter</a>
+        <a class="icon" onclick="myFunction()">&#9776;</a>
+    </header>
 
-              
-        </td>
-  <TD>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <a href = "logoutuser.php">Se deconnecter</a>
-  </TD>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navbar");
+            if (x.className === "nav") {
+                x.className += "responsive";
+            }else {
+                x.className = "nav";
+            }
+        }
+    </script>
 
-</tr>
-</table> 
-</div>
   
 <?php
    
    define('DB_SERVER', 'localhost');
    define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', '');
+   define('DB_PASSWORD', 'root');
    define('DB_DATABASE', 'pct_bd');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
    session_start();
@@ -70,60 +75,13 @@
    }
 
 ?>
-<h1>Bienvenue  <?php echo $login_session; ?></h1> 
-                   
+<h4>Bienvenue  <?php echo $login_session; ?></h4> 
+
+   <main class="main_users">
+      
+   </main>                
   
-</body>
+
+
+   </body>
 </html>
-<style>
-  input
-  {
-    float: right;
-  }
-  textarea
-  {
-    float: right;
-  }
-  .footer {
-   
-   width: 100%;
-   background-color:silver;
-   color: white;
-   text-align: center;
-}
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-  
-</style>

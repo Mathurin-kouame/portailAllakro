@@ -4,16 +4,17 @@
   <meta charset="utf-8" />
   <title>phamacie de garde </title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="./ressources/css/liste_garde.css" />
  </head>
  
  <body>
-    <img src="banniere.jpg" class="logo">
-      <center><h1>liste des pharmacies de garde</h1></center>
+    
+      <h1>liste des pharmacies de garde</h1>
  
         <?php
   try  //Connection a la bdd
   {
-   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', '');
+   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', 'root');
   }
   catch (Exception $e)
   {

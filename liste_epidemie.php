@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8" />
   <title>Message</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="./ressources/css/liste_epidemie.css" />
   <script type="text/javascript">
           function changeValueOfCheckbox(check) {
             var tr = document.getElementById(check.value);
@@ -31,12 +31,12 @@
  
  <body>
     <img src="banniere.jpg" class="logo">
-      <center><h1>Message</h1></center>
+      <h1>Message</h1>
       
         <?php
   try  //Connection a la bdd
   {
-   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', '');
+   $bdd = new PDO('mysql:host=localhost;dbname=pct_bd;charset=utf8', 'root', 'root');
   }
   catch (Exception $e)
   {
@@ -46,11 +46,11 @@
   
         echo '<center><div class="liste"><table>';
                  echo '<tr>';
-                    echo '<th class="thliste">numero</th>';
-                     echo '<th class="thliste">nom</th>';
-                     echo '<th class="thliste">libelle</th>';
-                     echo '<th class="thliste">datedebut</th>';
-                     echo '<th class="thliste">datefin</th>';
+                    echo '<th class="thliste">N°</th>';
+                     echo '<th class="thliste">Nom</th>';
+                     echo '<th class="thliste">Libelle</th>';
+                     echo '<th class="thliste">Date Début</th>';
+                     echo '<th class="thliste">Date Fin</th>';
                      
                  echo '</tr>';
    
@@ -78,6 +78,6 @@
   
   </br>
   </br>
-  </center>
+ 
     </body>
 </html>

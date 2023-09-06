@@ -2,7 +2,7 @@
     $serveur = "localhost";
     $dbname = "pct_bd";
     $user = "root";
-    $pass = "";
+    $pass = "root";
    
 
     $natacti = $_POST["nature"];
@@ -25,8 +25,8 @@
         $sth->bindParam(':libelle',$libacti);
         $sth->bindParam(':date',$date);
         $sth->execute();
-         //On renvoie l'utilisateur vers la page de remerciement
-         header("Location:merci.html"); 
+        //  //On renvoie l'utilisateur vers la page de remerciement
+          header("activite.php"); 
     }
     catch(PDOException $e){
         echo 'Impossible de traiter les données. Erreur : '.$e->getMessage();

@@ -2,7 +2,7 @@
     $serveur = "localhost";
     $dbname = "pct_bd";
     $user = "root";
-    $pass = "";
+    $pass = "root";
    
    $type= $_POST["type"];
    $username= $_POST["username"];
@@ -21,7 +21,7 @@
         //On insère les données reçues
         $sth = $dbco->prepare ("
         INSERT INTO users(type,username,email,password,confirmpass)
-            VALUES(:type, :username, :email, :pass, :confirmpass)");
+        VALUES(:type, :username, :email, :pass, :confirmpass)");
         
         $sth->bindParam(':type',$type);  
         $sth->bindParam(':username',$username);

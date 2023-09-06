@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.tableau-mess {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .liste {
+    overflow-x: auto;
+ }
+ 
+ table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 20px;
+ }
+ 
+ th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgb(62, 8, 8);
+ }
+ 
+ th {
+    background-color: #5ca65c;
+    font-weight: bold;
+    color: #333;
+ }
+ 
+ tr.selected {
+    background-color: #921010;
+ }
+ 

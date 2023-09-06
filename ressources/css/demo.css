@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif 'popins';
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    background-color: #0d613e; 
+    position: relative;
+    flex-direction: row;
+}
+
+.logo_site a {
+    margin-left:30px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+header .hover_a .dropdown_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > a, header button {
+    color: #fff;
+    margin: 0 30px;
+    font-size: 1.3em;
+}
+
+header button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+header  .dropdown_1  {
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+
+header  .dropdown_1 .sous_content {
+    display: none;
+}
+
+header .hover_a:hover{
+    padding: 12px;
+    background-color: #149825;
+} 
+
+header  .dropdown_1:hover .sous_content {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color:  #149825;
+    top: 70px;
+    width: 120%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+header .sous_content a{
+    color: #fff;
+}
+
+header .icon {
+    display: none;
+}
+
+/* espace responsive */
+@media (max-width: 909px) {
+
+    .logo_site a {
+        top: 20px;
+        margin-left:30px;
+        font-size: 1.5rem;
+        color: #fff;
+        position: absolute;
+    }
+
+    header > a,
+    header button {
+        display: none;
+    }
+    header .icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 5% !important;
+        top: 20px;
+        transform: translateY(-50%);
+    
+    }
+    header.responsive > a{
+        padding: 10px 0;
+    }
+    header.responsive > a,
+    header.responsive .dropdown_1 {
+         display: block;
+         width: 120%;
+         display: flex;
+         justify-content: center;
+         text-align: center;
+
+    }
+
+    header.responsive button {
+        display: block;
+        padding: 10px 0;
+    }
+
+    header  {
+      flex-direction: column;
+      min-height: 70px;
+      height: 100%;
+      align-items: flex-start;
+    }
+    header  .dropdown_1:hover .sous_content {
+        position: relative;
+        width: 100%;
+        top: 0;
+        padding-left: 20px;
+    }
+}

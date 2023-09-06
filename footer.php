@@ -1,8 +1,7 @@
 <footer id="footer" class="footer-1">
 <div class="main-footer widgets-dark typo-light">
 <div class="container">
-<div class="row">
-  
+<div class="row"> 
 <div class="col-xs-12 col-sm-6 col-md-3">
 <div class="widget subscribe no-box">
 <h5 class="widget-title">PortailAllakro<span></span></h5>

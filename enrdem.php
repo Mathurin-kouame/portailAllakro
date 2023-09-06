@@ -2,14 +2,14 @@
     $serveur = "localhost";
     $dbname = "pct_bd";
     $user = "root";
-    $pass = "";
+    $pass = "root";
    
 
    $numact= $_POST["reussite"];
    $lieact= $_POST["lieudedepart"];
    $datact= $_POST["datedepart"];
    $motact= $_POST["motifdepart"];
-   $natact= $_POST["etat"]=demenagement;
+   $natact= $_POST["etat"]='demenagement';
 
   
 
